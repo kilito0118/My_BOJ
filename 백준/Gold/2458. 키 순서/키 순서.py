@@ -27,7 +27,10 @@ for i in range(1,a+1):
     dfs(i,1)
     check[i]=0
     dfs(i,0)
-    
-    if len(set(check[1:]))==1:
+    for j in range(1,a+1):
+        if check[j]==0:
+            #print(i)
+            break        
+    else:
         cnt+=1
 print(cnt)
